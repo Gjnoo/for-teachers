@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Спасибо, учитель! — поздравление с Днём учителя</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --board:#1d3a35; --board2:#16302c; --chalk:#f3f1e7; --yellow:#f2c94c; --pink:#f28ca5; --blue:#7cc4e8; --mint:#8fd6b0;
+  --paper:#f7f9f8; --line:#b9d3e6; --ink:#24353a; --margin:#e7788a;
+  --hand:'Marck Script','Segoe Script','Comic Sans MS',cursive;
+  --sans:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,92%);margin:0 auto}
+h1,h2,h3{font-family:var(--hand);font-weight:400;line-height:1.1}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(10px + env(safe-area-inset-top,0px)) 4% 10px;display:flex;justify-content:space-between;align-items:center;background:rgba(22,48,44,.82);backdrop-filter:blur(8px);color:var(--chalk)}
+nav b{font-family:var(--hand);font-size:1.5rem;font-weight:400;color:var(--yellow)}
+nav ul{display:flex;gap:22px;list-style:none;font-size:.95rem}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{opacity:1;color:var(--yellow)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--chalk);padding:120px 5% 90px;overflow:hidden;
+  background:
+   radial-gradient(1200px 600px at 50% 0%,rgba(255,255,255,.08),transparent 60%),
+   repeating-linear-gradient(115deg,rgba(255,255,255,.015) 0 3px,transparent 3px 9px),
+   var(--board)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22px;background:linear-gradient(#a8743f,#7d5129);box-shadow:0 -6px 18px rgba(0,0,0,.35)}
+.doodle{position:absolute;font-family:var(--hand);color:rgba(243,241,231,.28);pointer-events:none;user-select:none}
+.d1{top:16%;left:6%;font-size:clamp(1.4rem,3vw,2.4rem);transform:rotate(-8deg)}
+.d2{top:24%;right:7%;font-size:clamp(1.2rem,2.6vw,2rem);transform:rotate(6deg)}
+.d3{bottom:20%;left:9%;font-size:clamp(1.2rem,2.6vw,2rem);transform:rotate(5deg)}
+.d4{bottom:24%;right:8%;font-size:clamp(1.4rem,3vw,2.4rem);transform:rotate(-5deg)}
+.hero h1{font-size:clamp(3.2rem,11vw,8.5rem);color:var(--chalk);text-shadow:0 0 1px #fff,0 0 18px rgba(255,255,255,.18);
+  clip-path:inset(0 100% 0 0);animation:write 2.2s .3s cubic-bezier(.6,.1,.3,1) forwards}
+.hero h1 span{color:var(--yellow)}
+@keyframes write{to{clip-path:inset(0 0 0 0)}}
+.hero p.lead{max-width:640px;margin:22px auto 0;font-size:clamp(1.05rem,2.2vw,1.35rem);opacity:0;animation:fade 1s 2.2s forwards}
+.hero .cta{opacity:0;animation:fade 1s 2.6s forwards;margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+@keyframes fade{to{opacity:1}}
+.btn{font:700 1rem var(--sans);border:0;cursor:pointer;padding:14px 28px;border-radius:999px;text-decoration:none;display:inline-block;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:var(--yellow);color:#2a2a1c;box-shadow:0 6px 0 #b8941f}
+.btn.main:active{transform:translateY(4px);box-shadow:0 2px 0 #b8941f}
+.btn.ghost{background:transparent;color:var(--chalk);border:2px dashed rgba(243,241,231,.6)}
+
+/* sections */
+section{padding:clamp(70px,10vw,130px) 0}
+.title{font-size:clamp(2.4rem,6vw,4.2rem);margin-bottom:14px}
+.sub{max-width:620px;font-size:1.1rem;opacity:.85}
+
+/* lessons: lined notebook */
+.notebook{background:
+  linear-gradient(90deg,transparent 0 62px,var(--margin) 62px 64px,transparent 64px),
+  repeating-linear-gradient(transparent 0 35px,var(--line) 35px 36px),#fff;
+  border-radius:6px 22px 22px 6px;padding:20px 28px 20px 92px;box-shadow:0 20px 50px rgba(30,60,70,.15);position:relative}
+.notebook::before{content:"";position:absolute;left:18px;top:30px;bottom:30px;width:16px;background:radial-gradient(circle,#dfe9ef 5px,#9db3c0 6px,transparent 7px) 0 0/16px 64px repeat-y}
+.lessons{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.notebook li{list-style:none;font-family:var(--hand);font-size:1.55rem;line-height:36px;color:#27508a;padding:0}
+.notebook li s{color:#c2475a;text-decoration-thickness:2px}
+.notebook li em{font-style:normal;color:#1c8057}
+.lessons .text p{margin-bottom:16px;font-size:1.08rem}
+.lessons .text p:first-child::first-letter{font-family:var(--hand);font-size:3.6rem;float:left;line-height:.9;padding:6px 10px 0 0;color:#2b6a5e}
+
+/* numbers on a board strip */
+.strip{background:var(--board2);color:var(--chalk);padding:70px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;text-align:center}
+.stats div{padding:10px}
+.stats strong{display:block;font-family:var(--hand);font-weight:400;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1}
+.stats div:nth-child(1) strong{color:var(--yellow)}
+.stats div:nth-child(2) strong{color:var(--pink)}
+.stats div:nth-child(3) strong{color:var(--blue)}
+.stats div:nth-child(4) strong{color:var(--mint)}
+.stats span{opacity:.8;font-size:.98rem}
+
+/* wishes: sticky notes */
+.wishes{background:#eef3f1}
+.notes{margin-top:54px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px 28px}
+.note{padding:30px 26px 28px;min-height:230px;box-shadow:0 14px 24px rgba(30,50,50,.16);position:relative;transition:transform .3s}
+.note:nth-child(1){background:#fff0a8;transform:rotate(-2deg)}
+.note:nth-child(2){background:#ffd1dc;transform:rotate(1.6deg);border-radius:4px 4px 30px 4px}
+.note:nth-child(3){background:#cdeafc;transform:rotate(-1deg)}
+.note:nth-child(4){background:#d4f1de;transform:rotate(1.8deg)}
+.note:nth-child(5){background:#ffe0b8;transform:rotate(-1.6deg);border-radius:4px 30px 4px 4px}
+.note:nth-child(6){background:#e6dcff;transform:rotate(1deg)}
+.note:hover{transform:rotate(0) scale(1.04);z-index:2}
+.note::before{content:"";position:absolute;top:-10px;left:50%;width:70px;height:22px;margin-left:-35px;background:rgba(255,255,255,.65);box-shadow:0 1px 3px rgba(0,0,0,.15);transform:rotate(-3deg)}
+.note h3{font-size:2rem;margin-bottom:8px;color:#2a3b45}
+.note p{font-size:1rem;color:#34454b}
+
+/* generator */
+.maker{background:linear-gradient(180deg,var(--paper),#e3efea)}
+.card-grid{margin-top:50px;display:grid;grid-template-columns:5fr 6fr;gap:44px;align-items:start}
+.form{background:#fff;border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(30,60,70,.12)}
+.form label{display:block;font-weight:700;margin:0 0 8px}
+.form input[type=text]{width:100%;font:inherit;font-size:1.05rem;padding:14px 16px;border:2px solid #cfe0da;border-radius:14px;background:#fbfdfc;margin-bottom:22px}
+.form input[type=text]:focus{border-color:#2b6a5e;outline:0;box-shadow:0 0 0 4px rgba(43,106,94,.15)}
+.tones{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tones input{position:absolute;opacity:0}
+.tones label{margin:0;padding:10px 18px;border-radius:999px;background:#eaf2ef;font-weight:500;cursor:pointer;border:2px solid transparent;transition:.2s}
+.tones input:checked+label{background:var(--board);color:var(--chalk)}
+.tones input:focus-visible+label{outline:3px solid var(--yellow);outline-offset:2px}
+.form .btn.main{width:100%}
+.postcard{background:var(--board);color:var(--chalk);border-radius:20px;padding:clamp(28px,5vw,52px);position:relative;box-shadow:0 24px 50px rgba(20,50,45,.35);border:10px solid #a8743f;min-height:340px;display:flex;flex-direction:column;justify-content:space-between}
+.postcard h3{color:var(--yellow);font-size:clamp(2rem,4.5vw,3rem);margin-bottom:14px;word-break:break-word}
+.postcard #msg{font-family:var(--hand);font-size:clamp(1.3rem,2.6vw,1.75rem);line-height:1.45}
+.postcard .sign{margin-top:22px;text-align:right;font-family:var(--hand);font-size:1.5rem;color:var(--pink)}
+.copy{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.copy .btn{padding:11px 22px;font-size:.95rem}
+.copy small{color:#2b6a5e;font-weight:700;min-height:1.2em}
+
+/* wall */
+.wall-form{margin:40px 0 46px;display:flex;gap:12px;flex-wrap:wrap}
+.wall-form input{flex:1 1 150px;font:inherit;padding:14px 16px;border:2px solid #cfe0da;border-radius:14px}
+.wall-form input.wide{flex:3 1 280px}
+.wall-form input:focus{border-color:#2b6a5e;outline:0}
+.wall{columns:3 280px;column-gap:24px}
+.bubble{break-inside:avoid;margin-bottom:24px;background:#fff;border-radius:20px 20px 20px 4px;padding:22px 24px;box-shadow:0 10px 26px rgba(30,60,70,.1);border-left:6px solid var(--c,#2b6a5e);animation:pop .5s}
+.bubble p{font-size:1.02rem}
+.bubble b{display:block;margin-top:10px;font-family:var(--hand);font-weight:400;font-size:1.35rem;color:var(--c,#2b6a5e)}
+@keyframes pop{from{transform:scale(.9);opacity:0}}
+
+footer{background:var(--board2);color:var(--chalk);text-align:center;padding:80px 5% calc(60px + env(safe-area-inset-bottom,0px))}
+footer h2{font-size:clamp(2.4rem,6vw,4.4rem);color:var(--yellow)}
+footer p{margin-top:12px;opacity:.8}
+.heart{display:inline-block;cursor:pointer;font-size:3.4rem;margin-top:26px;background:none;border:0;transition:transform .2s}
+.heart:hover{transform:scale(1.2)}
+
+/* scroll reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+.piece{position:fixed;top:-30px;z-index:50;pointer-events:none;font-size:1.6rem;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:.9}}
+
+/* responsive */
+@media(max-width:900px){
+  .lessons,.card-grid{grid-template-columns:1fr}
+  .notes{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  nav ul{display:none}
+  .notes{grid-template-columns:1fr}
+  .note{min-height:0}
+  .notebook{padding:16px 16px 16px 76px}
+  .notebook li{font-size:1.3rem}
+  .doodle{display:none}
+  .btn{width:100%;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .hero h1{clip-path:none}.hero p.lead,.hero .cta,.rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <b>Спасибо, учитель</b>
+  <ul>
+    <li><a href="#lessons">Уроки</a></li>
+    <li><a href="#wishes">Пожелания</a></li>
+    <li><a href="#maker">Открытка</a></li>
+    <li><a href="#wall">Стена теплоты</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <span class="doodle d1">a² + b² = c²</span>
+  <span class="doodle d2">H₂O</span>
+  <span class="doodle d3">Пушкин А. С.</span>
+  <span class="doodle d4">E = mc²</span>
+  <div>
+    <h1>Спасибо,<br><span>Учитель!</span></h1>
+    <p class="lead">Вы научили нас не только читать, считать и писать. Вы научили верить в себя. С праздником!</p>
+    <div class="cta">
+      <a class="btn main" href="#maker">Сделать открытку</a>
+      <a class="btn ghost" href="#wall">Написать на стену</a>
+    </div>
+  </div>
+</header>
+
+<section id="lessons">
+  <div class="wrap">
+    <h2 class="title rv">Главные уроки, которые не по программе</h2>
+    <p class="sub rv">Оценки забываются, а то, как с нами разговаривали, остаётся на всю жизнь.</p>
+    <div class="lessons">
+      <div class="notebook rv">
+        <ul>
+          <li>Ошибаться — <s>стыдно</s> <em>нормально</em></li>
+          <li>Задавать вопросы — это сила</li>
+          <li>Начать всё заново можно всегда</li>
+          <li>Трудно — не значит невозможно</li>
+          <li>Доброе слово тоже учит</li>
+          <li>Каждый способен на большее</li>
+          <li>Любопытство важнее оценок</li>
+        </ul>
+      </div>
+      <div class="text rv">
+        <p>Урок заканчивается со звонком, а учитель остаётся с нами надолго. В его голосе мы слышим свои первые прочитанные строки, в его терпении — собственные первые победы.</p>
+        <p>Учитель не просто объясняет тему в десятый раз. Он видит в каждом то, о чём сам человек ещё не догадывается, и ждёт, пока это проявится.</p>
+        <p>Спасибо за проверенные в выходные тетради, за вечера, потраченные на подготовку, за веру в тех, в кого не верил никто.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap stats rv">
+    <div><strong>∞</strong><span>терпения в одном человеке</span></div>
+    <div><strong>1000+</strong><span>проверенных тетрадей за год</span></div>
+    <div><strong>11 лет</strong><span>школа, которая меняет жизнь</span></div>
+    <div><strong>1</strong><span>учитель, которого помнят всегда</span></div>
+  </div>
+</div>
+
+<section id="wishes" class="wishes">
+  <div class="wrap">
+    <h2 class="title rv">Шесть пожеланий от всего сердца</h2>
+    <p class="sub rv">Берите любое, а лучше все сразу.</p>
+    <div class="notes">
+      <article class="note rv"><h3>Здоровья</h3><p>Крепкого голоса к концу шестого урока, спокойных нервов и сил на всё, что запланировано.</p></article>
+      <article class="note rv"><h3>Терпения</h3><p>Чтобы любая тема усваивалась с первого раза, а домашние задания приходили вовремя.</p></article>
+      <article class="note rv"><h3>Вдохновения</h3><p>Свежих идей, живых уроков и глаз, которые горят от интереса.</p></article>
+      <article class="note rv"><h3>Благодарных учеников</h3><p>Таких, что вспоминают вас через годы и приходят просто сказать «спасибо».</p></article>
+      <article class="note rv"><h3>Времени для себя</h3><p>Выходных без проверки тетрадей, путешествий, хобби и тишины по вечерам.</p></article>
+      <article class="note rv"><h3>Радости</h3><p>Чтобы каждый школьный день приносил хотя бы одну маленькую победу.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="maker" class="maker">
+  <div class="wrap">
+    <h2 class="title rv">Соберите открытку за минуту</h2>
+    <p class="sub rv">Впишите имя учителя, выберите настроение, и текст готов. Его можно скопировать и отправить.</p>
+    <div class="card-grid">
+      <div class="form rv">
+        <label for="tname">Как зовут учителя?</label>
+        <input id="tname" type="text" placeholder="Например, Мария Ивановна" maxlength="40" autocomplete="off">
+        <label for="from">От кого поздравление?</label>
+        <input id="from" type="text" placeholder="Например, 9 «Б» класс" maxlength="40" autocomplete="off">
+        <label style="margin-bottom:10px">Настроение</label>
+        <div class="tones" role="radiogroup" aria-label="Настроение открытки">
+          <span><input type="radio" name="tone" id="t1" value="warm" checked><label for="t1">Тёплое</label></span>
+          <span><input type="radio" name="tone" id="t2" value="solemn"><label for="t2">Торжественное</label></span>
+          <span><input type="radio" name="tone" id="t3" value="short"><label for="t3">Короткое</label></span>
+        </div>
+        <button class="btn main" id="make" type="button">Создать открытку</button>
+      </div>
+      <div class="rv">
+        <div class="postcard" aria-live="polite">
+          <div>
+            <h3 id="to">Дорогой учитель!</h3>
+            <p id="msg">Спасибо за ваш труд, терпение и доброту. Пусть каждый день в школе приносит радость!</p>
+          </div>
+          <div class="sign" id="sign">С любовью, ваши ученики</div>
+        </div>
+        <div class="copy">
+          <button class="btn main" id="copy" type="button">Скопировать текст</button>
+          <small id="copied"></small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="wall">
+  <div class="wrap">
+    <h2 class="title rv">Стена тёплых слов</h2>
+    <p class="sub rv">Оставьте своё слово благодарности. Оно появится здесь сразу, а при обновлении страницы сотрётся, как мел с доски.</p>
+    <form class="wall-form rv" id="wf">
+      <input id="wn" type="text" placeholder="Ваше имя" maxlength="30" required>
+      <input id="wt" class="wide" type="text" placeholder="Что хотите сказать учителю?" maxlength="200" required>
+      <button class="btn main" type="submit">Оставить</button>
+    </form>
+    <div class="wall" id="wallbox">
+      <div class="bubble" style="--c:#2b6a5e"><p>Вы научили меня не бояться ошибок. Теперь я сама учу детей и говорю им ваши слова.</p><b>Анна, выпуск 2012</b></div>
+      <div class="bubble" style="--c:#d0577a"><p>Спасибо, что не сдались на мне, когда сдался я сам.</p><b>Дмитрий</b></div>
+      <div class="bubble" style="--c:#2f7fb0"><p>На ваших уроках впервые захотелось читать не по заданию, а просто так.</p><b>Лейла, 11 класс</b></div>
+      <div class="bubble" style="--c:#b8861c"><p>Лучший классный руководитель на свете. Мы вас любим!</p><b>Родители 7 «А»</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>С Днём учителя!</h2>
+  <p>Пусть вас окружают те, кто умеет говорить «спасибо».</p>
+  <button class="heart" id="heart" type="button" aria-label="Отправить сердечки">💛</button>
+</footer>
+
+<script>
+(function(){
+  // scroll reveal
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+
+  // falling emoji
+  function rain(list,n){
+    for(var i=0;i<n;i++){
+      var s=document.createElement('span');
+      s.className='piece';
+      s.textContent=list[Math.floor(Math.random()*list.length)];
+      s.style.left=Math.random()*100+'vw';
+      s.style.animationDuration=(2.4+Math.random()*2.4)+'s';
+      s.style.fontSize=(1.2+Math.random()*1.6)+'rem';
+      document.body.appendChild(s);
+      setTimeout(function(x){x.remove()},5200,s);
+    }
+  }
+
+  // greeting generator
+  var T={
+    warm:function(n){return 'Спасибо, что вы всегда рядом: объясняете, поддерживаете, верите в нас. С вами учиться по-настоящему интересно. Желаем вам здоровья, хорошего настроения и учеников, которыми вы будете гордиться!'},
+    solemn:function(n){return 'В этот праздничный день примите слова глубокой признательности за ваш благородный труд, мудрость и преданность профессии. Пусть ваши знания продолжают освещать путь многим поколениям!'},
+    short:function(n){return 'Спасибо за знания, терпение и доброту. С праздником!'}
+  };
+  var tname=document.getElementById('tname'),from=document.getElementById('from'),
+      to=document.getElementById('to'),msg=document.getElementById('msg'),sign=document.getElementById('sign');
+  function make(){
+    var n=tname.value.trim(),f=from.value.trim();
+    var tone=document.querySelector('input[name=tone]:checked').value;
+    to.textContent=n?(tone==='solemn'?'С праздником, ':'С Днём учителя, ')+n+'!':'Дорогой учитель!';
+    msg.textContent=T[tone](n);
+    sign.textContent=f?'С уважением и любовью, '+f:'С любовью, ваши ученики';
+    rain(['🌸','⭐','📚','✏️','💛'],18);
+  }
+  document.getElementById('make').addEventListener('click',make);
+  document.getElementById('copy').addEventListener('click',function(){
+    var text=to.textContent+'\n\n'+msg.textContent+'\n\n'+sign.textContent;
+    var done=function(){var c=document.getElementById('copied');c.textContent='Скопировано!';setTimeout(function(){c.textContent=''},2200)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,function(){})}
+    else{var a=document.createElement('textarea');a.value=text;document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(e){}a.remove()}
+  });
+
+  // wall of thanks
+  var colors=['#2b6a5e','#d0577a','#2f7fb0','#b8861c','#7a5bc0'];
+  document.getElementById('wf').addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('wn'),t=document.getElementById('wt');
+    var b=document.createElement('div');b.className='bubble';
+    b.style.setProperty('--c',colors[Math.floor(Math.random()*colors.length)]);
+    var p=document.createElement('p');p.textContent=t.value.trim();
+    var s=document.createElement('b');s.textContent=n.value.trim();
+    b.appendChild(p);b.appendChild(s);
+    var box=document.getElementById('wallbox');box.insertBefore(b,box.firstChild);
+    n.value='';t.value='';rain(['💛','🌷'],12);
+  });
+
+  document.getElementById('heart').addEventListener('click',function(){rain(['💛','💖','🌸','⭐','🍎'],40)});
+})();
+</script>
+</body>
+</html>
